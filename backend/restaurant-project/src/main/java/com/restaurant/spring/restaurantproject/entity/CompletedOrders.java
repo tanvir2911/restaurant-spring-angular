@@ -22,9 +22,9 @@ public class CompletedOrders {
     private String[] orderItems;
     private Long netAmount;
 
-    @ManyToOne
-    @JoinColumn(name="userId", referencedColumnName = "id", nullable = false)
-    private Users user;
+//    @ManyToOne
+//    @JoinColumn(name="userId", referencedColumnName = "id", nullable = false)
+    private Long userId;
     private LocalDateTime time;
     private String address;
     private String orderStatus;

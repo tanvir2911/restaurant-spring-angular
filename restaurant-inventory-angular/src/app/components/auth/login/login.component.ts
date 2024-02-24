@@ -40,7 +40,9 @@ export class LoginComponent implements OnInit {
         ) {
           localStorage.setItem('isLogin', 'true');
           localStorage.setItem('user', JSON.stringify(this.authList[i]));
-          localStorage.setItem('role', this.authList[i].role);
+          for (let j = 0; j < this.authList[i].roles.length; j++) {
+            localStorage.setItem('role', this.authList[i].roles[j].roleName);
+          }
 
           flag = true;
         }

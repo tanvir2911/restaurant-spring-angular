@@ -92,7 +92,7 @@
         "value": [],
         "errors": null
       },
-      "role": "admin"
+      "role": "Manager"
     },
     {
       "id": "32b1",
@@ -211,9 +211,7 @@
   "orders": [
     {
       "id": "e3dd",
-      "orderItems": [
-        "walnut"
-      ],
+      "orderItems": ["walnut"],
       "netAmount": 150,
       "userId": "2",
       "time": null,
@@ -224,9 +222,7 @@
   "cancelledOrders": [
     {
       "id": "8731",
-      "orderItems": [
-        "walnut"
-      ],
+      "orderItems": ["walnut"],
       "netAmount": 150,
       "userId": "1",
       "time": "06:07",
@@ -235,10 +231,7 @@
     },
     {
       "id": "4664",
-      "orderItems": [
-        "pizza",
-        "murgi"
-      ],
+      "orderItems": ["pizza", "murgi"],
       "netAmount": 705,
       "userId": "2",
       "time": "15:27",
@@ -249,9 +242,7 @@
   "completedOrders": [
     {
       "id": "052b",
-      "orderItems": [
-        "walnut"
-      ],
+      "orderItems": ["walnut"],
       "netAmount": 150,
       "userId": "1",
       "time": "03:24",
@@ -260,10 +251,7 @@
     },
     {
       "id": "f4d7",
-      "orderItems": [
-        "walnut",
-        "pizza"
-      ],
+      "orderItems": ["walnut", "pizza"],
       "netAmount": 300,
       "userId": "1",
       "time": "11:18",
@@ -272,11 +260,7 @@
     },
     {
       "id": "32a8",
-      "orderItems": [
-        "walnut",
-        "walnut",
-        "walnut"
-      ],
+      "orderItems": ["walnut", "walnut", "walnut"],
       "netAmount": 450,
       "userId": "1",
       "time": "06:22",
@@ -285,13 +269,7 @@
     },
     {
       "id": "5a62",
-      "orderItems": [
-        "pizza",
-        "murgi",
-        "pizza",
-        "murgi",
-        "murgi"
-      ],
+      "orderItems": ["pizza", "murgi", "pizza", "murgi", "murgi"],
       "netAmount": 2115,
       "userId": "2",
       "time": "14:44",
@@ -300,10 +278,7 @@
     },
     {
       "id": "22fe",
-      "orderItems": [
-        "pizza",
-        "murgi"
-      ],
+      "orderItems": ["pizza", "murgi"],
       "netAmount": 705,
       "userId": "32b1",
       "time": "14:52",

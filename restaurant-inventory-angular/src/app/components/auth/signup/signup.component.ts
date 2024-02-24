@@ -18,8 +18,6 @@ export class SignupComponent {
     userName: new FormControl(),
     password: new FormControl(),
     termsOfService: new FormControl(),
-
-    role: new FormControl(''),
   });
 
   // checkPass() {

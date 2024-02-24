@@ -72,6 +72,7 @@ export class OrdersComponent {
       this.order.address = this.timeAddressForm.value.address;
       this.orderService.addToOrders(this.order).subscribe((res) => {
         console.log('response:', res);
+        console.log('hello');
       });
       console.log(this.order);
       this.orders = [];

@@ -22,22 +22,17 @@ public class AuthController {
     @Autowired
     UsersService usersService;
 
-    @PostConstruct
-    public void initRoleAndUser() {
-//        usersService.initRoleAndUser();
-    }
-
-
     @PostMapping
-    public Users add(@RequestBody Users users) {
-
-        System.out.println(users.getUserName());
-        return null;
+    public void initRoleAndUser(@RequestBody Users users) {
+        usersService.initRoleAndUser(users);
     }
+
+
 
     @GetMapping
     public Iterable<Users> getAll() {
         return usersRepo.findAll();
+
     }
 
 

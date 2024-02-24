@@ -20,11 +20,11 @@ public class Orders {
     private Long id;
     private String[] orderItems;
     private Long netAmount;
-
-    @ManyToOne
-    @JoinColumn(name="userId", referencedColumnName = "id", nullable = false)
-    private Users user;
-    private LocalDateTime time;
+//
+//    @ManyToOne
+//    @JoinColumn(name="userId", referencedColumnName = "id", nullable = false)
+private Long userId;
+private LocalDateTime time;
     private String address;
     private String orderStatus;
 
