@@ -1,0 +1,125 @@
+<div class="body">
+  <!-- component -->
+  <div
+    class="flex min-h-screen items-center justify-center bg-white p-1 mx-5 pb-0 mb-0"
+  >
+    <table class="w-full min-w-max table-auto text-left">
+      <thead>
+        <tr>
+          <th class="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4">
+            <p
+              class="block antialiased font-sans text-sm text-blue-gray-900 font-normal leading-none opacity-70"
+            >
+              Item Name
+            </p>
+          </th>
+          <th class="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4">
+            <p
+              class="block antialiased font-sans text-sm text-blue-gray-900 font-normal leading-none opacity-70"
+            >
+              Quantity
+            </p>
+          </th>
+          <th class="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4">
+            <p
+              class="block antialiased font-sans text-sm text-blue-gray-900 font-normal leading-none opacity-70"
+            >
+              Amount
+            </p>
+          </th>
+
+          <th class="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4">
+            <p
+              class="block antialiased font-sans text-sm text-blue-gray-900 font-normal leading-none opacity-70"
+            >
+              Remove Item
+            </p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td class="p-4 border-b border-blue-gray-50">
+            <div class="flex items-center gap-3">
+              <img
+                [src]="order.foodImage"
+                alt="Spotify"
+                class="inline-block relative object-center !rounded-full w-12 h-12 rounded-lg border border-blue-gray-50 bg-blue-gray-50/50 object-contain p-1"
+              />
+              <p
+                class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-bold"
+              >
+                {{ order.title }}
+              </p>
+            </div>
+          </td>
+
+          <td class="p-4 border-b border-blue-gray-50">
+            <p
+              class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+            >
+              {{ order.quantity }}
+            </p>
+          </td>
+          <td class="p-4 border-b border-blue-gray-50">
+            <p
+              class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+            >
+              ${{ order.price }}
+            </p>
+          </td>
+          <td class="p-4 border-b border-blue-gray-50">
+            <button
+              class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/20"
+              type="button"
+              (click)="deleteAOrder(order)"
+            >
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
+              >
+                <img
+                  src="../../.././assets/img/delete-svgrepo-com.svg"
+                  alt=""
+                />
+              </span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <div class="flex items-end">
+  <h3>Total: {{ total }}</h3>
+</div> -->
+  </div>
+
+  <form [formGroup]="timeAddressForm" class="mb-5 flex justify-center">
+    <label class="block w-25">
+      <span class="block text-sm font-medium text-slate-700"
+        >Delivery Time</span
+      >
+      <!-- Using form state modifiers, the classes can be identical for every input -->
+      <input
+        formControlName="time"
+        type="time"
+        class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+      />
+    </label>
+    <label class="block w-25">
+      <span class="block text-sm font-medium text-slate-700">Address</span>
+      <!-- Using form state modifiers, the classes can be identical for every input -->
+      <input
+        formControlName="address"
+        type="address"
+        class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+      />
+    </label>
+    <!-- ... -->
+  </form>
+  <h1 class="span text-center mt-0">
+    <span class="fill-yellow-600">Total:</span> <span> {{ total }}</span>
+    <button (click)="checkout()" class="checkout ms-5" style="--c: #e95a49">
+      Checkout
+    </button>
+  </h1>
+  <br /><br /><br />
+</div>

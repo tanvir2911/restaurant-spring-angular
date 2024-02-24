@@ -1,0 +1,100 @@
+<a routerLink="/dashboard/customersOrders">
+  <button class="shadow-lg rounded px-5 bg-blue-500 text-white">Back</button>
+</a>
+<div class="flex">
+  <div class="col-md-6">
+    <div class="mx-5">
+      <h1>Order Information</h1>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Order Id:</div>
+          <div>{{ order.id || cancelOrder }}</div>
+        </div>
+      </div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Items:</div>
+          <div>{{ order.orderItems.toString() }}</div>
+        </div>
+      </div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Net Amount:</div>
+          <div>${{ order.netAmount }}</div>
+        </div>
+      </div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Order Time:</div>
+          <div>{{ order.time }}</div>
+        </div>
+      </div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Order Address:</div>
+          <div>{{ order.address }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <h1>Customer Information</h1>
+    <div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">UserId:</div>
+          <div>{{ user.id }}</div>
+        </div>
+      </div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Name:</div>
+          <div>{{ user.firstName }} {{ user.lastName }}</div>
+        </div>
+      </div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Phone :</div>
+          <div>{{ user.phoneNumber }}</div>
+        </div>
+      </div>
+      <div class="gap-3 mb-2">
+        <div class="flex justify-start gap-4">
+          <div style="width: 100px">Email :</div>
+          <div>{{ user.email }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-center gap-4">
+  <button
+    *ngIf="order.orderStatus == 'pending' || order.orderStatus == 'processing'"
+    (click)="cancelOrder()"
+    class="bg-red-500 rounded px-5 shadow-lg shadow-red-500/50 text-white"
+  >
+    Cancel Order
+  </button>
+  <button
+    *ngIf="order.orderStatus == 'delivered'"
+    class="bg-red-500 rounded px-5 shadow-lg shadow-red-500/50 text-white"
+  >
+    Completed Order
+  </button>
+  <button
+    *ngIf="order.orderStatus == 'pending'"
+    (click)="proceedOrder()"
+    class="bg-green-500 rounded px-5 shadow-lg shadow-green-500/50 text-white"
+  >
+    Proceed Order
+  </button>
+  <button
+    *ngIf="order.orderStatus == 'processing'"
+    (click)="deliverOrder()"
+    class="bg-blue-500 rounded px-5 shadow-lg shadow-blue-500/50 text-white"
+  >
+    Delivered
+  </button>
+</div>

@@ -1,0 +1,22 @@
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../../assets/img/bg-hero.jpg);
+  height: 80vh;
+  // filter: brightness(20%);
+}
+
+// image spinner start
+.rotate {
+  animation: rotation 30s infinite linear;
+  width: 70%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+// image spinner end

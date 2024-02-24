@@ -1,0 +1,314 @@
+{
+  "auth": [
+    {
+      "id": "1",
+      "phoneNumber": "01945824828",
+      "firstName": "Md. Mozammel",
+      "lastName": "Hossain",
+      "courseName": "java",
+      "email": "hossainmozammel27@gmail.com",
+      "userName": "tanvir",
+      "password": "tanvir",
+      "termsOfService": null,
+      "education": {
+        "_pendingDirty": false,
+        "_hasOwnPendingAsyncValidator": false,
+        "_pendingTouched": false,
+        "_parent": null,
+        "pristine": true,
+        "touched": false,
+        "_onDisabledChange": [],
+        "_rawValidators": null,
+        "_composedValidatorFn": null,
+        "_rawAsyncValidators": null,
+        "_composedAsyncValidatorFn": null,
+        "controls": [],
+        "valueChanges": {
+          "closed": false,
+          "currentObservers": null,
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "__isAsync": false
+        },
+        "statusChanges": {
+          "closed": false,
+          "currentObservers": null,
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "__isAsync": false
+        },
+        "status": "VALID",
+        "value": [],
+        "errors": null
+      },
+      "role": "employee"
+    },
+    {
+      "id": "2",
+      "phoneNumber": "01945824828",
+      "firstName": "Md. Mozammel",
+      "lastName": "Hossain",
+      "courseName": "java",
+      "email": "hossainmozammel27@gmail.com",
+      "userName": "tanvir",
+      "password": "tanvir1",
+      "termsOfService": null,
+      "education": {
+        "_pendingDirty": false,
+        "_hasOwnPendingAsyncValidator": false,
+        "_pendingTouched": false,
+        "_parent": null,
+        "pristine": true,
+        "touched": false,
+        "_onDisabledChange": [],
+        "_rawValidators": null,
+        "_composedValidatorFn": null,
+        "_rawAsyncValidators": null,
+        "_composedAsyncValidatorFn": null,
+        "controls": [],
+        "valueChanges": {
+          "closed": false,
+          "currentObservers": null,
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "__isAsync": false
+        },
+        "statusChanges": {
+          "closed": false,
+          "currentObservers": null,
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "__isAsync": false
+        },
+        "status": "VALID",
+        "value": [],
+        "errors": null
+      },
+      "role": "admin"
+    },
+    {
+      "id": "32b1",
+      "phoneNumber": "45454541",
+      "firstName": "Angel",
+      "lastName": "Priya",
+      "courseName": null,
+      "email": "angel.priya@gmail.com",
+      "userName": "angelpriya",
+      "password": "angelpriya",
+      "termsOfService": true,
+      "education": {
+        "_pendingDirty": false,
+        "_hasOwnPendingAsyncValidator": false,
+        "_pendingTouched": false,
+        "_parent": null,
+        "pristine": true,
+        "touched": false,
+        "_onDisabledChange": [],
+        "_rawValidators": null,
+        "_composedValidatorFn": null,
+        "_rawAsyncValidators": null,
+        "_composedAsyncValidatorFn": null,
+        "controls": [],
+        "valueChanges": {
+          "closed": false,
+          "currentObservers": null,
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "__isAsync": false
+        },
+        "statusChanges": {
+          "closed": false,
+          "currentObservers": null,
+          "observers": [],
+          "isStopped": false,
+          "hasError": false,
+          "thrownError": null,
+          "__isAsync": false
+        },
+        "status": "VALID",
+        "value": [],
+        "errors": null
+      },
+      "role": "employee"
+    }
+  ],
+  "foodItems": [
+    {
+      "id": "2f95",
+      "title": "pizza",
+      "description": "So delicious to eat",
+      "foodImage": "http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRq1mQLx2tcZ4owspN_OxqcHZBIc0f1F6NfiqBYgGnwEkdc3tbUGKETWmBH2PNppLs-dJJAt92vs2I16Eno7ks",
+      "price": "300",
+      "quantity": 1
+    },
+    {
+      "id": "0e6b",
+      "title": "walnut",
+      "description": "nice juicy",
+      "foodImage": "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
+      "price": "150",
+      "quantity": 1
+    },
+    {
+      "id": "9553",
+      "title": "pizza",
+      "description": "nice juicy",
+      "foodImage": "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
+      "price": "150",
+      "quantity": 1
+    },
+    {
+      "id": "5430",
+      "title": "murgi",
+      "description": "valona",
+      "foodImage": "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
+      "price": "555",
+      "quantity": 1
+    },
+    {
+      "id": "5431",
+      "title": "murgi",
+      "description": "valona",
+      "foodImage": "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
+      "price": "555",
+      "quantity": 1
+    },
+    {
+      "id": "5432",
+      "title": "murgi",
+      "description": "valona",
+      "foodImage": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/4/26/0/HE_kwon-Ground-Turkey-Enchilada-Stir-Fry-with-Couscous_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1461695054811.jpeg",
+      "price": "555",
+      "quantity": 1
+    },
+    {
+      "id": "5436",
+      "title": "murgi",
+      "description": "valona",
+      "foodImage": "https://media.post.rvohealth.io/wp-content/uploads/2022/09/frozen-dinner-meal-meatloaf-mashed-potatoes-vegetables-732x549-thumbnail-732x549.jpg",
+      "price": "555",
+      "quantity": 1
+    },
+    {
+      "id": "5435",
+      "title": "murgi",
+      "description": "valona",
+      "foodImage": "https://boydhampers.com/cdn/shop/articles/savory-cheeseboard.webp?v=1694216721&width=1100",
+      "price": "555",
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "e3dd",
+      "orderItems": [
+        "walnut"
+      ],
+      "netAmount": 150,
+      "userId": "2",
+      "time": null,
+      "address": null,
+      "orderStatus": "pending"
+    }
+  ],
+  "cancelledOrders": [
+    {
+      "id": "8731",
+      "orderItems": [
+        "walnut"
+      ],
+      "netAmount": 150,
+      "userId": "1",
+      "time": "06:07",
+      "address": "barisal",
+      "orderStatus": "cancelled"
+    },
+    {
+      "id": "4664",
+      "orderItems": [
+        "pizza",
+        "murgi"
+      ],
+      "netAmount": 705,
+      "userId": "2",
+      "time": "15:27",
+      "address": "Shahjahanpur",
+      "orderStatus": "cancelled"
+    }
+  ],
+  "completedOrders": [
+    {
+      "id": "052b",
+      "orderItems": [
+        "walnut"
+      ],
+      "netAmount": 150,
+      "userId": "1",
+      "time": "03:24",
+      "address": "chittagong",
+      "orderStatus": "delivered"
+    },
+    {
+      "id": "f4d7",
+      "orderItems": [
+        "walnut",
+        "pizza"
+      ],
+      "netAmount": 300,
+      "userId": "1",
+      "time": "11:18",
+      "address": "khulna",
+      "orderStatus": "delivered"
+    },
+    {
+      "id": "32a8",
+      "orderItems": [
+        "walnut",
+        "walnut",
+        "walnut"
+      ],
+      "netAmount": 450,
+      "userId": "1",
+      "time": "06:22",
+      "address": "Rajshahi",
+      "orderStatus": "delivered"
+    },
+    {
+      "id": "5a62",
+      "orderItems": [
+        "pizza",
+        "murgi",
+        "pizza",
+        "murgi",
+        "murgi"
+      ],
+      "netAmount": 2115,
+      "userId": "2",
+      "time": "14:44",
+      "address": "Rangpur",
+      "orderStatus": "delivered"
+    },
+    {
+      "id": "22fe",
+      "orderItems": [
+        "pizza",
+        "murgi"
+      ],
+      "netAmount": 705,
+      "userId": "32b1",
+      "time": "14:52",
+      "address": "Nukunja",
+      "orderStatus": "delivered"
+    }
+  ]
+}
