@@ -24,7 +24,7 @@ public class Orders {
 //    @ManyToOne
 //    @JoinColumn(name="userId", referencedColumnName = "id", nullable = false)
 private Long userId;
-private LocalDateTime time;
+private LocalTime time;
     private String address;
     private String orderStatus;
 

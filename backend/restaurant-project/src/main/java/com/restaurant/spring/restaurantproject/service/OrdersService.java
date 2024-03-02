@@ -16,11 +16,14 @@ public class OrdersService {
         return ordersRepo.findAll();
     }
 
-    public Orders save(Orders orders){
-        return ordersRepo.save(orders);
+    public void save(Orders orders){
+
+        System.out.println(orders);
+        ordersRepo.save(orders);
     }
 
     public Orders getById(Long id){
+        System.out.println(ordersRepo.findById(id).get().getId());
         return ordersRepo.findById(id).get();
     }
 

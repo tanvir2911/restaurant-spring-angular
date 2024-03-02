@@ -22,7 +22,9 @@ export class OrderServiceService {
     }),
   };
 
-  addToOrders(order: Order) {
+  addToOrders(order: any) {
+    console.log('order service ', order);
+
     return this.httpClient.post(this.apiURL, order);
   }
 

@@ -22,11 +22,13 @@ public class OrdersController {
 
     @GetMapping("/{id}")
     public Orders getById(@PathVariable("id") Long id){
+        System.out.println(ordersService.getById(id));
         return ordersService.getById(id);
     }
     @PostMapping
-    public Orders postOrders(@RequestBody Orders orders){
-        return ordersService.save(orders);
+    public void postOrders(@RequestBody Orders orders){
+        System.out.println(orders.getOrderItems());
+         ordersService.save(orders);
     }
 
     @PutMapping("/{id}")

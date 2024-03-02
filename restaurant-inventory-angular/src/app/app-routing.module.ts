@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/home/services/services.component';
 import { CheckoutComponent } from './components/orders/checkout/checkout.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { TablesComponent } from './components/tables/tables.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent,
+  },
+  {
+    path: 'tables',
+    component: TablesComponent,
   },
   {
     path: 'aboutUs',

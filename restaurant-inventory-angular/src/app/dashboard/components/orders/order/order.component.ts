@@ -24,13 +24,15 @@ export class OrderComponent {
     // this.getCancelledOrder();
   }
   getOrder() {
+    console.log('get order called');
+
     this.orderService.getOrderById(this.id).subscribe((res: any) => {
+      console.log('inside getorderbyid', this.order);
       this.order = res;
       this.authService.getUserById(this.order.userId).subscribe((val: any) => {
         this.user = val;
         console.log(this.user);
       });
-      console.log(this.order);
     });
   }
 

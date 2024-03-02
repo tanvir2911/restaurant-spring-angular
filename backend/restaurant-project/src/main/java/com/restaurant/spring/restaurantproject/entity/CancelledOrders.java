@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @NoArgsConstructor
@@ -25,7 +26,7 @@ public class CancelledOrders {
 //    @ManyToOne
 //    @JoinColumn(name="userId", referencedColumnName = "id", nullable = false)
     private Long userId;
-    private LocalDateTime time;
+    private LocalTime time;
     private String address;
     private String orderStatus;
 }

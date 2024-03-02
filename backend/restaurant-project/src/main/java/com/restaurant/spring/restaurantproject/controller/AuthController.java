@@ -1,6 +1,7 @@
 package com.restaurant.spring.restaurantproject.controller;
 
 
+import com.restaurant.spring.restaurantproject.entity.Orders;
 import com.restaurant.spring.restaurantproject.entity.Users;
 import com.restaurant.spring.restaurantproject.repository.RoleRepo;
 import com.restaurant.spring.restaurantproject.repository.UsersRepo;
@@ -33,6 +34,12 @@ public class AuthController {
     public Iterable<Users> getAll() {
         return usersRepo.findAll();
 
+    }
+
+    @GetMapping("/{id}")
+    public Users getById(@PathVariable("id") Long id){
+        System.out.println(usersService.getById(id));
+        return usersService.getById(id);
     }
 
 

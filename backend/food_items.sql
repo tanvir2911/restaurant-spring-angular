@@ -1,0 +1,6 @@
+
+INSERT INTO food_items(id, DESCRIPTION, food_image, price, quantity,title) VALUES(1, 'Food Closeup. Grilled Ribs In Barbecue Restaurant. Spareribs With Vegetables And Sauce On Wooden Tray. ', 'https://plus.unsplash.com/premium_photo-1663036447682-8f0d918adbed?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 400,50, 'Grilled Ribs');
+
+INSERT INTO food_items(id, DESCRIPTION, food_image, price, quantity,title) VALUES(2, 'roasted ribs with sliced tomatoes and potatoes', 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 500,50, 'Roasted ribs');
+
+INSERT INTO food_items(id, DESCRIPTION, food_image, price, quantity,title) VALUES(3, 'bowl of vegetable', 'https://images.unsplash.com/photo-1556040220-4096d522378d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 200,50, 'bowl of vegetable');
