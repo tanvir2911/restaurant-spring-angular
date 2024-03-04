@@ -5,6 +5,7 @@ import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { DashboardHomeComponent } from './components/dashboard-home/dashboard-home.component';
 import { OrderComponent } from './components/orders/order/order.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { RestaurantTableAlignmentsComponent } from './components/restaurant-table-alignments/restaurant-table-alignments.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   { path: 'customersOrders', component: OrdersComponent },
   { path: 'customersOrders/:orderId', component: OrderComponent },
   { path: 'addItems', component: AddMenuComponent },
+  {
+    path: 'restaurantTableAlignments',
+    component: RestaurantTableAlignmentsComponent,
+  },
 ];
 
 @NgModule({
