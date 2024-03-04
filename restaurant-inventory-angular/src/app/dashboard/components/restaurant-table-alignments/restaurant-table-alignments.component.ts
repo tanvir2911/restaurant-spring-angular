@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 // import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
@@ -8,8 +9,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./restaurant-table-alignments.component.scss'],
 })
 export class RestaurantTableAlignmentsComponent {
-  // items = ['Item 1', 'Item 2', 'Item 3'];
-  // onDrop(event: CdkDragDrop<string[]>) {
-  //   moveItemInArray(this.items, event.previousIndex, event.currentIndex);
+  constructor() {
+    this.createTableForm = new FormGroup({
+      tableId: new FormControl(''),
+      capacity: new FormControl(''),
+      serviceCharge: new FormControl(''),
+      position: new FormControl(''),
+    });
+  }
+
+  createTableForm!: any;
+
+  tables!: any[];
+  table: any = {};
+
+  createTable() {
+    this.table = this.createTableForm.value;
+    this.tables.push(this.table);
+  }
+
+  // deleteTable(e: any) {
+  //   for (let i = 0; i < this.tables.length; i++) {
+  //     if (this.tables[i].tableId == e) {
+  //       this.tables.splice(i, 1);
+  //     }
+  //   }
   // }
+
+  saveDiagram() {}
 }
