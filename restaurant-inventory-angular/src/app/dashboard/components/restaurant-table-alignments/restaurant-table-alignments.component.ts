@@ -13,6 +13,35 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./restaurant-table-alignments.component.scss'],
 })
 export class RestaurantTableAlignmentsComponent {
+  // captureScreenshot() {
+  //   // Get the div element to capture
+  //   const captureDiv = document.getElementById('captureDiv');
+
+  //   // Create a canvas element to draw the screenshot
+  //   const canvas = document.createElement('canvas');
+  //   const context = canvas.getContext('2d');
+  //   canvas.width = captureDiv.offsetWidth;
+  //   canvas.height = captureDiv.offsetHeight;
+
+  //   // Draw the content of the div onto the canvas
+  //   context.drawWindow(
+  //     window,
+  //     0,
+  //     0,
+  //     canvas.width,
+  //     canvas.height,
+  //     'rgb(255,255,255)'
+  //   );
+
+  //   // Convert the canvas content to a data URL
+  //   const dataUrl = canvas.toDataURL('image/png');
+
+  //   // Open a new window/tab with the screenshot
+  //   const newWindow = window.open();
+  //   newWindow.document.write('<img src="' + dataUrl + '" alt="Screenshot"/>');
+  // }
+
+  // ===========
   capturedImage: any;
 
   capture() {
