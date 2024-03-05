@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptureModule } from 'ngx-capture';
 import { AddMenuComponent } from './components/add-menu/add-menu.component';
 import { DashboardHomeComponent } from './components/dashboard-home/dashboard-home.component';
 import { OrderComponent } from './components/orders/order/order.component';
@@ -31,7 +32,7 @@ import { DashboardComponent } from './dashboard.component';
     DashboardRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-
+    NgxCaptureModule,
     DragDropModule,
   ],
 })
