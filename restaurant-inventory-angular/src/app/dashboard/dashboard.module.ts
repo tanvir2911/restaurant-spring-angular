@@ -5,7 +5,10 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptureModule } from 'ngx-capture';
 import { AddMenuComponent } from './components/add-menu/add-menu.component';
+import { AddToInventoryComponent } from './components/add-to-inventory/add-to-inventory.component';
 import { DashboardHomeComponent } from './components/dashboard-home/dashboard-home.component';
+import { EditInventoryComponent } from './components/inventory/edit-inventory/edit-inventory.component';
+import { InventoryComponent } from './components/inventory/inventory.component';
 import { OrderComponent } from './components/orders/order/order.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { CanvasComponent } from './components/restaurant-table-alignments/canvas/canvas.component';
@@ -26,6 +29,9 @@ import { DashboardComponent } from './dashboard.component';
     EditorComponent,
     CanvasComponent,
     TableComponent,
+    InventoryComponent,
+    AddToInventoryComponent,
+    EditInventoryComponent,
   ],
   imports: [
     CommonModule,

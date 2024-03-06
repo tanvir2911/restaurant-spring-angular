@@ -1,0 +1,120 @@
+<a routerLink="/dashboard/inventory">
+  <button class="shadow-lg rounded px-5 bg-blue-500 text-white">Back</button>
+</a>
+
+<form
+  action=""
+  method="post"
+  role="form"
+  [formGroup]="inventoryForm"
+  (ngSubmit)="update()"
+>
+  <div
+    class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2"
+  >
+    <div class="-mx-3 md:flex mb-6">
+      <div class="md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+        >
+          Invetory Category
+        </label>
+        <div class="relative">
+          <select
+            formControlName="{{ inventory.inventoryCategory }}"
+            class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
+          >
+            <option value="vegetables">Vegetables</option>
+            <option value="fish">Fish</option>
+            <option value="meat">Meat</option>
+            <option value="drinks">Drinks</option>
+            <option value="beverages">Beverages</option>
+            <option value="others">Others</option>
+          </select>
+          <div
+            class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker"
+          >
+            <svg
+              class="h-4 w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          for="grid-last-name"
+        >
+          Item Name
+        </label>
+        <input
+          formControlName="itemName"
+          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          id="grid-last-name"
+          type="text"
+          placeholder="Rui fish"
+        />
+      </div>
+    </div>
+    <div class="-mx-3 md:flex mb-6">
+      <div class="md:w-full px-3">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          for="grid-password"
+        >
+          Item Description
+        </label>
+        <input
+          formControlName="itemDescription"
+          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+          id="grid-password"
+          type="text"
+          placeholder="Good Rui Fish"
+        />
+      </div>
+    </div>
+    <div class="-mx-3 md:flex mb-2">
+      <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          for="grid-city"
+        >
+          Item Quantity
+        </label>
+        <input
+          formControlName="itemQuantity"
+          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          id="grid-city"
+          type="number"
+          placeholder="Number of items"
+        />
+      </div>
+      <div class="md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+          for="grid-state"
+        >
+          Unit Cost
+        </label>
+        <input
+          formControlName="unitCost"
+          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+          type="number"
+          placeholder="Number of items"
+        />
+      </div>
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="minecraft-btn mx-auto w-64 text-center text-white truncate p-1 border-2 border-b-4 hover:text-yellow-200"
+  >
+    Update
+  </button>
+</form>

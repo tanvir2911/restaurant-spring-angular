@@ -3,8 +3,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { NgxCaptureService } from 'ngx-capture';
 import { FileServiceService } from 'src/app/service/file-service.service';
 
-import html2canvas from 'html2canvas';
-
 // import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
@@ -13,54 +11,26 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./restaurant-table-alignments.component.scss'],
 })
 export class RestaurantTableAlignmentsComponent {
-  // captureScreenshot() {
-  //   // Get the div element to capture
-  //   const captureDiv = document.getElementById('captureDiv');
-
-  //   // Create a canvas element to draw the screenshot
-  //   const canvas = document.createElement('canvas');
-  //   const context = canvas.getContext('2d');
-  //   canvas.width = captureDiv.offsetWidth;
-  //   canvas.height = captureDiv.offsetHeight;
-
-  //   // Draw the content of the div onto the canvas
-  //   context.drawWindow(
-  //     window,
-  //     0,
-  //     0,
-  //     canvas.width,
-  //     canvas.height,
-  //     'rgb(255,255,255)'
-  //   );
-
-  //   // Convert the canvas content to a data URL
-  //   const dataUrl = canvas.toDataURL('image/png');
-
-  //   // Open a new window/tab with the screenshot
-  //   const newWindow = window.open();
-  //   newWindow.document.write('<img src="' + dataUrl + '" alt="Screenshot"/>');
-  // }
-
   // ===========
   capturedImage: any;
 
-  capture() {
-    // Select the element that you want to capture
-    let captureElement = document.querySelector('#capture') as HTMLElement;
+  // capture() {
+  //   // Select the element that you want to capture
+  //   let captureElement = document.querySelector('#capture') as HTMLElement;
 
-    // Call the html2canvas function and pass the element as an argument
-    html2canvas(captureElement).then((canvas) => {
-      // Get the image data as a base64-encoded string
-      const imageData = canvas.toDataURL('image/png');
+  //   // Call the html2canvas function and pass the element as an argument
+  //   html2canvas(captureElement).then((canvas) => {
+  //     // Get the image data as a base64-encoded string
+  //     const imageData = canvas.toDataURL('image/png');
 
-      // Do something with the image data, such as saving it as a file or sending it to a server
-      // For example, you can create an anchor element and trigger a download action
-      const link = document.createElement('a');
-      link.setAttribute('download', 'screenshot.png');
-      link.setAttribute('href', imageData);
-      link.click();
-    });
-  }
+  //     // Do something with the image data, such as saving it as a file or sending it to a server
+  //     // For example, you can create an anchor element and trigger a download action
+  //     const link = document.createElement('a');
+  //     link.setAttribute('download', 'screenshot.png');
+  //     link.setAttribute('href', imageData);
+  //     link.click();
+  //   });
+  // }
 
   constructor(
     private captureService: NgxCaptureService,
@@ -77,28 +47,28 @@ export class RestaurantTableAlignmentsComponent {
   imgBase64: any = '';
   @ViewChild('screen', { static: true }) screen: any;
 
-  // capture() {
-  //   console.log('capture called');
+  capture() {
+    console.log('capture called');
 
-  //   this.captureService
-  //     .getImage(this.screen.nativeElement, true)
-  //     .pipe(
-  //       tap((img) => {
-  //         console.log(img);
-  //       }),
-  //       tap((img) => this.captureService.downloadImage(img))
-  //     )
-  //     .subscribe();
+    this.captureService;
+    // .getImage(this.screen.nativeElement, true)
+    // .pipe(
+    //   tap((img) => {
+    //     console.log(img);
+    //   }),
+    //   tap((img) => this.captureService.downloadImage(img))
+    // )
+    // .subscribe();
 
-  //   // this.captureService
-  //   //   .getImage(this.screen.nativeElement, true)
-  //   //   .toPromise()
-  //   //   .then((img: any) => {
-  //   //     console.log(img);
-  //   //     this.imgBase64 = img;
-  //   //     this.save();
-  //   //   });
-  // }
+    this.captureService
+      .getImage(this.screen.nativeElement, true)
+      .toPromise()
+      .then((img: any) => {
+        console.log(img);
+        this.imgBase64 = img;
+        this.save();
+      });
+  }
 
   DataURIToBlob(dataURI: string) {
     console.log('DataURIToBlob called');
