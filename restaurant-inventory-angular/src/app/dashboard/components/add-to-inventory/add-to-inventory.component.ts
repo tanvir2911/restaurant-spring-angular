@@ -28,7 +28,7 @@ export class AddToInventoryComponent {
   x!: any;
   // inventory: any;
   inventory: any = {
-    userId: '',
+    enlistedBy: '',
     inventoryCategory: '',
     itemName: '',
     itemDescription: '',
@@ -38,7 +38,7 @@ export class AddToInventoryComponent {
   addInventory() {
     this.x = localStorage.getItem('user');
     this.x = JSON.parse(this.x);
-    this.inventory.userId = this.x.id;
+    this.inventory.enlistedBy = this.x.id;
     this.inventory.inventoryCategory =
       this.inventoryForm.value.inventoryCategory;
     this.inventory.itemName = this.inventoryForm.value.itemName;

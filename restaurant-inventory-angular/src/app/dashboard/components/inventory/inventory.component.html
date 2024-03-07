@@ -1,7 +1,17 @@
 <form action="" [formGroup]="searchForm">
-  <input formControlName="title" type="text" />
+  <input
+    [(ngModel)]="searchQuery"
+    [ngModelOptions]="{ standalone: true }"
+    placeholder="Search"
+    type="text"
+  />
   <button (click)="search()">Search</button>
 </form>
+
+<div *ngFor="let item of searchResults">
+  <!-- Display your search results here -->
+  {{ item.itemName }}
+</div>
 
 <div class="p-6 overflow-scroll px-0">
   <table class="mt-4 w-full min-w-max table-auto text-left">
@@ -158,6 +168,54 @@
           <p
             class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70"
           >
+            Last Updatd By
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              aria-hidden="true"
+              class="h-4 w-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+              ></path>
+            </svg>
+          </p>
+        </th>
+        <th
+          class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
+        >
+          <p
+            class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70"
+          >
+            Last Updated AT
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              aria-hidden="true"
+              class="h-4 w-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+              ></path>
+            </svg>
+          </p>
+        </th>
+        <th
+          class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
+        >
+          <p
+            class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70"
+          >
             Actions
           </p>
         </th>
@@ -225,8 +283,22 @@
           </p>
         </td>
         <td class="p-4 border-b border-blue-gray-50">
+          <p
+            class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+          >
+            {{ inventory.updaterFullName }}
+          </p>
+        </td>
+        <td class="p-4 border-b border-blue-gray-50">
+          <p
+            class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal"
+          >
+            {{ inventory.updatedAt }}
+          </p>
+        </td>
+        <td class="p-4 border-b border-blue-gray-50">
           <button
-            routerLink="/dashboard/addToInventory/{{ inventory.id }}"
+            routerLink="/dashboard/inventory/{{ inventory.id }}"
             class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-blue-gray-500 hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30"
             type="button"
           >

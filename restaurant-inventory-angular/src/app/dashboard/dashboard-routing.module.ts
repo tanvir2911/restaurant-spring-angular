@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   { path: 'customersOrders', component: OrdersComponent },
   { path: 'customersOrders/:orderId', component: OrderComponent },
-  { path: 'addToInventory/:inventoryId ', component: EditInventoryComponent },
+  { path: 'inventory/:inventoryId', component: EditInventoryComponent },
   { path: 'addItems', component: AddMenuComponent },
   {
     path: 'restaurantTableAlignments',

@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -22,9 +23,11 @@ export class InventoryServiceService {
   getAll() {
     return this.httpClient.get(this.apiURL);
   }
-  // getAll() {
-  //   return this.httpClient.get(this.apiURL + '/search');
-  // }
+
+  searchInventories(query: string): Observable<any[]> {
+    const url = `${this.apiURL}/search?query=${query}`;
+    return this.httpClient.get<any[]>(url);
+  }
 
   getById(id: any) {
     return this.httpClient.get(this.apiURL + '/' + id);

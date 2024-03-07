@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -26,8 +28,13 @@ public class Inventory {
 
     private Long itemQuantity;
     private Long unitCost;
-    private String userId;
-    private LocalDateTime enlistTime =LocalDateTime.now();
+    private String enlistedBy;
 
+    @CreationTimestamp
+    private LocalDateTime enlistTime;
+
+    private String updatedBy;
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 
 }

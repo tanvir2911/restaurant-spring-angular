@@ -9,6 +9,8 @@ import { InventoryServiceService } from 'src/app/service/inventory-service.servi
   styleUrls: ['./inventory.component.scss'],
 })
 export class InventoryComponent {
+  searchQuery: string = '';
+  searchResults: any[] = [];
   inventories!: any;
   inventory!: any;
   constructor(
@@ -28,9 +30,15 @@ export class InventoryComponent {
       this.inventories = res;
       for (let i = 0; i < this.inventories.length; i++) {
         this.authService
-          .getUserById(this.inventories[i].userId)
+          .getUserById(this.inventories[i].enlistedBy)
           .subscribe((res: any) => {
             this.inventories[i].userFullName =
+              res.firstName + ' ' + res.lastName;
+          });
+        this.authService
+          .getUserById(this.inventories[i].updatedBy)
+          .subscribe((res: any) => {
+            this.inventories[i].updaterFullName =
               res.firstName + ' ' + res.lastName;
           });
       }
@@ -40,6 +48,13 @@ export class InventoryComponent {
   }
 
   search() {
-    console.log(this.searchForm.value);
+    this.inventoryService.searchInventories(this.searchQuery).subscribe(
+      (data) => {
+        this.searchResults = data;
+      },
+      (error) => {
+        console.error('Error fetching search results:', error);
+      }
+    );
   }
 }
