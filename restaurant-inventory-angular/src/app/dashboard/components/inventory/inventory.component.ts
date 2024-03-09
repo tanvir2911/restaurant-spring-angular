@@ -57,4 +57,9 @@ export class InventoryComponent {
       }
     );
   }
+  deleteInventory(id: any) {
+    this.inventoryService.deleteById(id).subscribe((res: any) => {
+      this.getInventories();
+    });
+  }
 }

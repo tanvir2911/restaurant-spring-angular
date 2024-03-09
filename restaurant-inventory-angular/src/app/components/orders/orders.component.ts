@@ -43,7 +43,7 @@ export class OrdersComponent {
     }
   }
 
-  deleteAOrder(inputOrder: FoodItem) {
+  deleteAnOrder(inputOrder: FoodItem) {
     this.total = 0;
     this.x = localStorage.getItem('orders');
     this.orders = JSON.parse(this.x);

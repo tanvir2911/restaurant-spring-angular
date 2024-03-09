@@ -21,6 +21,7 @@ export class AddToInventoryComponent {
       itemDescription: new FormControl(),
       itemQuantity: new FormControl(),
       unitCost: new FormControl(),
+      unitType: new FormControl(),
     });
   }
 
@@ -34,6 +35,7 @@ export class AddToInventoryComponent {
     itemDescription: '',
     itemQuantity: '',
     unitCost: '',
+    unitType: '',
   };
   addInventory() {
     this.x = localStorage.getItem('user');
@@ -45,6 +47,7 @@ export class AddToInventoryComponent {
     this.inventory.itemDescription = this.inventoryForm.value.itemDescription;
     this.inventory.itemQuantity = this.inventoryForm.value.itemQuantity;
     this.inventory.unitCost = this.inventoryForm.value.unitCost;
+    this.inventory.unitType = this.inventoryForm.value.unitType;
     this.inventoryService.add(this.inventory).subscribe((res) => {});
     this.clear();
   }
