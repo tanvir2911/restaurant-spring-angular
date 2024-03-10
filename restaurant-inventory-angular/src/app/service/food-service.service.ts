@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FoodItem } from '../model/foodItem';
 
 @Injectable({
@@ -22,5 +23,10 @@ export class FoodServiceService {
 
   getAllFoodItems() {
     return this.httpClient.get(this.apiURL);
+  }
+
+  searchFoodItems(query: string): Observable<any[]> {
+    const url = `${this.apiURL}/search?query=${query}`;
+    return this.httpClient.get<any[]>(url);
   }
 }

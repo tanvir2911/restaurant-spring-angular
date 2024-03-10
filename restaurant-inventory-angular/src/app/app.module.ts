@@ -23,7 +23,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CheckoutComponent } from './components/orders/checkout/checkout.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { TablesComponent } from './components/tables/tables.component';
-import { DashboardModule } from './dashboard/dashboard.module';
+import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    DashboardModule,
+    DashboardRoutingModule,
     DragDropModule,
   ],
   providers: [],

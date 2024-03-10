@@ -33,4 +33,9 @@ public class FoodItemsService {
         foodItems.setId(id);
         return foodItemsRepo.save(foodItems);
     }
+
+
+    public List<FoodItems> searchFoodItems(String query) {
+        return foodItemsRepo.searchFoodItems(query);
+    }
 }

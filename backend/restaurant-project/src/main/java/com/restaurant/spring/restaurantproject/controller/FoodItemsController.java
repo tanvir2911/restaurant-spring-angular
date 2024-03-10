@@ -2,8 +2,10 @@ package com.restaurant.spring.restaurantproject.controller;
 
 
 import com.restaurant.spring.restaurantproject.entity.FoodItems;
+import com.restaurant.spring.restaurantproject.entity.Inventory;
 import com.restaurant.spring.restaurantproject.service.FoodItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,5 +38,12 @@ public class FoodItemsController {
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable("id")Long id){
         foodItemsService.deleteOrders(id);
+    }
+
+
+
+    @GetMapping("/search")
+    public ResponseEntity<List<FoodItems>> searchProducts(@RequestParam("query") String query){
+        return ResponseEntity.ok(foodItemsService.searchFoodItems(query));
     }
 }

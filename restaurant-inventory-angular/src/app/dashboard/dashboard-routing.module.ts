@@ -6,6 +6,7 @@ import { AddToInventoryComponent } from './components/add-to-inventory/add-to-in
 import { DashboardHomeComponent } from './components/dashboard-home/dashboard-home.component';
 import { EditInventoryComponent } from './components/inventory/edit-inventory/edit-inventory.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
+import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { OrderComponent } from './components/orders/order/order.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { RestaurantTableAlignmentsComponent } from './components/restaurant-table-alignments/restaurant-table-alignments.component';
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'addToInventory',
     component: AddToInventoryComponent,
+  },
+  {
+    path: 'kitchen',
+    component: KitchenComponent,
   },
 ];
 
