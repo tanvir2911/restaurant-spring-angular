@@ -53,6 +53,7 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
     ReactiveFormsModule,
     HttpClientModule,
     DashboardRoutingModule,
+
     DragDropModule,
   ],
   providers: [],

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Order } from 'src/app/model/order';
 import { FoodServiceService } from 'src/app/service/food-service.service';
+import { InventoryServiceService } from 'src/app/service/inventory-service.service';
+import { KitchenServiceService } from 'src/app/service/kitchen-service.service';
 import { OrderServiceService } from 'src/app/service/order-service.service';
 
 @Component({
@@ -12,7 +14,9 @@ export class KitchenComponent {
   orders!: Order[];
   constructor(
     private orderService: OrderServiceService,
-    private foodService: FoodServiceService
+    private foodService: FoodServiceService,
+    private inventoryService: InventoryServiceService,
+    private kitchenService: KitchenServiceService
   ) {
     this.getOrders();
   }
@@ -28,20 +32,25 @@ export class KitchenComponent {
   search: any;
   foodItems: any[] = [];
   searchResult: any;
+  inventories: any;
 
-  filterProducts({ target: { value } }: any) {
-    // const filteredProducts = this.foodItems.filter((filtered: any) =>
-    //   filtered.title.includes(value)
-    // );
-    this.foodService.searchFoodItems(value).subscribe((res: any) => {
-      this.foodItems = res;
-    });
-    console.log(this.foodItems); // this prints the array of filtered
-  }
-
-  getSearchData(value: any) {
+  filterFoodItems({ target: { value } }: any) {
     this.foodService.searchFoodItems(value).subscribe((res: any) => {
       this.foodItems = res;
     });
   }
+
+  filterInventoryItems({ target: { value } }: any) {
+    this.inventoryService.searchInventories(value).subscribe((res: any) => {
+      this.inventories = res;
+    });
+  }
+
+  getSearchedFoodItems(value: any) {
+    this.foodService.searchFoodItems(value).subscribe((res: any) => {
+      this.foodItems = res;
+    });
+  }
+
+  sendToCounter() {}
 }
