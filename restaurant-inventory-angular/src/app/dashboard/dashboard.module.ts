@@ -18,6 +18,7 @@ import { RestaurantTableAlignmentsComponent } from './components/restaurant-tabl
 import { TableComponent } from './components/restaurant-table-alignments/table/table.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
+import { AddToKitchenDialogComponent } from './components/kitchen/add-to-kitchen-dialog/add-to-kitchen-dialog.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DashboardComponent } from './dashboard.component';
     AddToInventoryComponent,
     EditInventoryComponent,
     KitchenComponent,
+    AddToKitchenDialogComponent,
   ],
   imports: [
     CommonModule,
