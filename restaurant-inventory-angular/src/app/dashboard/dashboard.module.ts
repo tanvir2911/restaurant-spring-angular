@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { DialogModule } from '@angular/cdk/dialog';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptureModule } from 'ngx-capture';
@@ -9,6 +10,7 @@ import { AddToInventoryComponent } from './components/add-to-inventory/add-to-in
 import { DashboardHomeComponent } from './components/dashboard-home/dashboard-home.component';
 import { EditInventoryComponent } from './components/inventory/edit-inventory/edit-inventory.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
+import { AddToKitchenDialogComponent } from './components/kitchen/add-to-kitchen-dialog/add-to-kitchen-dialog.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { OrderComponent } from './components/orders/order/order.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -18,7 +20,7 @@ import { RestaurantTableAlignmentsComponent } from './components/restaurant-tabl
 import { TableComponent } from './components/restaurant-table-alignments/table/table.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { AddToKitchenDialogComponent } from './components/kitchen/add-to-kitchen-dialog/add-to-kitchen-dialog.component';
+import { CreateDishesComponent } from './components/kitchen/create-dishes/create-dishes.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { AddToKitchenDialogComponent } from './components/kitchen/add-to-kitchen
     EditInventoryComponent,
     KitchenComponent,
     AddToKitchenDialogComponent,
+    CreateDishesComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +47,7 @@ import { AddToKitchenDialogComponent } from './components/kitchen/add-to-kitchen
     ReactiveFormsModule,
     NgxCaptureModule,
     DragDropModule,
+    DialogModule,
   ],
 })
 export class DashboardModule {}

@@ -1,1 +1,6 @@
-<p>add-to-kitchen-dialog works!</p>
+<h1>Add To Kitchen: {{ data.itemName }}</h1>
+<p>Inventory: {{ data.itemQuantity }}</p>
+<form action="" [formGroup]="inventoryForm" (ngSubmit)="addToKitchen()">
+  <input type="number" formControlName="itemQuantity" /> units <br />
+  <button type="submit">Add To Kitchen</button>
+</form>

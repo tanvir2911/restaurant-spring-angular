@@ -45,12 +45,6 @@ export class EditInventoryComponent implements OnInit {
       console.log(res);
 
       this.inventoryForm.setValue(this.inventory);
-      // this.authService
-      //   .getUserById(this.inventory.userId)
-      //   .subscribe((val: any) => {
-      //     this.user = val;
-      //     console.log(this.inventory);
-      //   });
     });
   }
   update() {

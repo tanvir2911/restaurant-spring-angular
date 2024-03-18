@@ -47,7 +47,7 @@ public class InventoryController {
 
 //
     @GetMapping("/search")
-    public ResponseEntity<List<Inventory>> searchProducts(@RequestParam("query") String query){
+    public ResponseEntity<List<Inventory>> search(@RequestParam("query") String query){
         return ResponseEntity.ok(inventoryService.searchInventories(query));
     }
 

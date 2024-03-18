@@ -49,7 +49,10 @@ public class FoodItemsController {
         foodItemsService.deleteOrders(id);
     }
 
-
+    @GetMapping("/search")
+    public ResponseEntity<List<FoodItems>> search(@RequestParam("query") String query){
+        return ResponseEntity.ok(foodItemsService.searchFoodItems(query));
+    }
 
     @GetMapping(value = "/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<byte[]> downloadInvoice() throws JRException, IOException {

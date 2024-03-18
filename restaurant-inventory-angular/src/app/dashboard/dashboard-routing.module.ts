@@ -6,6 +6,7 @@ import { AddToInventoryComponent } from './components/add-to-inventory/add-to-in
 import { DashboardHomeComponent } from './components/dashboard-home/dashboard-home.component';
 import { EditInventoryComponent } from './components/inventory/edit-inventory/edit-inventory.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
+import { CreateDishesComponent } from './components/kitchen/create-dishes/create-dishes.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { OrderComponent } from './components/orders/order/order.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: 'kitchen',
     component: KitchenComponent,
+  },
+  {
+    path: 'createDishes',
+    component: CreateDishesComponent,
   },
 ];
 

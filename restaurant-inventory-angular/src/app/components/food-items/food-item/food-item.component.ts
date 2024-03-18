@@ -17,7 +17,7 @@ export class FoodItemComponent {
 
   @Input() foodItems: FoodItem[] = [];
 
-  itemQuant!: number;
+  itemQuant: number=0;
 
   plus(quantity: number) {
     quantity++;
