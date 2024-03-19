@@ -23,6 +23,7 @@ public class DishService {
     }
 
     public List<Dish> getAll(){
+//        return dishRepo.findDishesCreatedToday();
         return dishRepo.findAll();
     }
 
@@ -57,7 +58,11 @@ public class DishService {
         return dishRepo.save(dish);
     }
 
-    public List<Dish> searchDishes(String query) {
-        return dishRepo.searchDishes(query);
+//    public List<Dish> searchDishes(String query) {
+//        return dishRepo.searchDishes(query);
+//    }
+
+    public List<Dish> searchDishesWithItemsByName(String dishName) {
+        return dishRepo.findDishesWithItemsByName(dishName);
     }
 }

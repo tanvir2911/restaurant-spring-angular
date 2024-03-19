@@ -117,7 +117,12 @@
   </form>
   <h1 class="span text-center mt-0">
     <span class="fill-yellow-600">Total:</span> <span> {{ total }}</span>
-    <button (click)="checkout()" class="checkout ms-5" style="--c: #e95a49">
+    <button
+      (click)="checkout()"
+      class="checkout ms-5"
+      style="--c: #e95a49"
+      routerLink="/myorders/checkout/{id}"
+    >
       Checkout
     </button>
   </h1>

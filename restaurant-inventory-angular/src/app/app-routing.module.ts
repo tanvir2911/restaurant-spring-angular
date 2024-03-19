@@ -6,13 +6,18 @@ import { FoodItemsComponent } from './components/food-items/food-items.component
 import { AboutUsComponent } from './components/home/about-us/about-us.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/home/services/services.component';
+import { CancelComponent } from './components/orders/checkout/cancel/cancel.component';
 import { CheckoutComponent } from './components/orders/checkout/checkout.component';
+import { InvoiceComponent } from './components/orders/checkout/invoice/invoice.component';
+import { PrintLayoutComponent } from './components/orders/checkout/print-layout/print-layout.component';
+import { StripeCheckoutComponent } from './components/orders/checkout/stripe-checkout/stripe-checkout.component';
+import { SuccessComponent } from './components/orders/checkout/success/success.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
     component: HomeComponent,
@@ -46,9 +51,18 @@ const routes: Routes = [
     component: OrdersComponent,
   },
   {
-    path: 'myorders/checkout',
+    path: 'myorders/checkout/:id',
     component: CheckoutComponent,
   },
+  {
+    path: 'checkout',
+    component: StripeCheckoutComponent,
+  },
+  { path: 'cancel', component: CancelComponent },
+  { path: 'success', component: SuccessComponent },
+  { path: 'print', component: PrintLayoutComponent },
+  { path: 'print/invoice', component: InvoiceComponent },
+
   {
     path: 'dashboard',
     component: DashboardComponent,

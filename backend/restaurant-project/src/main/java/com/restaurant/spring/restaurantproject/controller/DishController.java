@@ -42,6 +42,8 @@ public class DishController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Dish>> search(@RequestParam("query") String query){
-        return ResponseEntity.ok(dishService.searchDishes(query));
+        return ResponseEntity.ok(dishService.searchDishesWithItemsByName(query));
+//        return ResponseEntity.ok(dishService.searchDishes(query));
+
     }
 }

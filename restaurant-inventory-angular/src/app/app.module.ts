@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +22,12 @@ import { HeaderComponent } from './components/home/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/home/services/services.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CancelComponent } from './components/orders/checkout/cancel/cancel.component';
 import { CheckoutComponent } from './components/orders/checkout/checkout.component';
+import { InvoiceComponent } from './components/orders/checkout/invoice/invoice.component';
+import { PrintLayoutComponent } from './components/orders/checkout/print-layout/print-layout.component';
+import { StripeCheckoutComponent } from './components/orders/checkout/stripe-checkout/stripe-checkout.component';
+import { SuccessComponent } from './components/orders/checkout/success/success.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
@@ -43,6 +50,11 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
     ChefsComponent,
     AboutUsComponent,
     TablesComponent,
+    CancelComponent,
+    SuccessComponent,
+    StripeCheckoutComponent,
+    PrintLayoutComponent,
+    InvoiceComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +65,8 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
     ReactiveFormsModule,
     HttpClientModule,
     DashboardRoutingModule,
+    MatCardModule,
+    MatButtonModule,
 
     DragDropModule,
   ],

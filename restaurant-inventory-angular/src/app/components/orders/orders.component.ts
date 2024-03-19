@@ -5,6 +5,10 @@ import { FoodItem } from 'src/app/model/foodItem';
 import { AuthService } from 'src/app/service/auth.service';
 import { OrderServiceService } from 'src/app/service/order-service.service';
 
+// import pdfMake from 'pdfmake/build/pdfmake';
+// import pdfFonts from 'pdfmake/build/vfs_fonts';
+// pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 @Component({
   selector: 'restaurant-orders',
   templateUrl: './orders.component.html',
@@ -78,7 +82,23 @@ export class OrdersComponent {
       this.orders = [];
       this.total = 0;
       localStorage.removeItem('orders');
-      this.router.navigateByUrl('/myorders/checkout');
+      // this.router.navigateByUrl('/myorders/checkout');
+      // this.generatePdf();
+      this.router.navigateByUrl('/home');
     }
   }
+
+  // generatePdf() {
+  //   const docDefinition = {
+  //     content: [
+  //       { text: 'User Data', style: 'header' },
+  //       { table: { body: this.order } },
+  //     ],
+  //     styles: {
+  //       header: { fontSize: 18, bold: true, margin: [0, 0, 0, 10] },
+  //     },
+  //   };
+
+  //   pdfMake.createPdf(docDefinition).download('userdata.pdf');
+  // }
 }
