@@ -3,6 +3,7 @@ import { Order } from 'src/app/model/order';
 import { User } from 'src/app/model/user';
 import { AuthService } from 'src/app/service/auth.service';
 import { OrderServiceService } from 'src/app/service/order-service.service';
+import { InventoryServiceService } from './../../../service/inventory-service.service';
 
 @Component({
   selector: 'restaurant-dashboard-home',
@@ -14,16 +15,28 @@ export class DashboardHomeComponent {
   userCount: number = 0;
   orders!: Order[];
   totalSell: number = 0;
+  totalInventoryCost: number = 0;
   totalOrderCount: number = 0;
   cancelledOrderCount: number = 0;
   completedOrderCount: number = 0;
   constructor(
     private authService: AuthService,
-    private orderService: OrderServiceService
+    private orderService: OrderServiceService,
+    private inventoryService: InventoryServiceService
   ) {
     this.getAllUsers();
     this.getAllOrders();
   }
+
+  getInventories() {
+    this.inventoryService.getAll().subscribe((res: any) => {
+      for (let i of res) {
+        this.totalInventoryCost += i.itemQuantity * i.unitCost;
+      }
+      console.log(this.totalInventoryCost);
+    });
+  }
+
   getAllUsers() {
     this.authService.getAll().subscribe((res: any) => {
       this.users = res;

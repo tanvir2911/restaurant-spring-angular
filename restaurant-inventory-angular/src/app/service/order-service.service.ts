@@ -32,6 +32,10 @@ export class OrderServiceService {
     return this.httpClient.get(this.apiURL);
   }
 
+  getPdf() {
+    return this.httpClient.get(this.apiURL + '/pdf');
+  }
+
   getOrderById(id: any) {
     return this.httpClient.get(this.apiURL + '/' + id);
   }

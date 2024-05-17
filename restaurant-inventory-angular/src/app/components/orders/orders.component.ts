@@ -78,6 +78,7 @@ export class OrdersComponent {
         console.log('response:', res);
         console.log('hello');
       });
+      this.orderService.getPdf().subscribe((res: any) => {});
       console.log(this.order);
       this.orders = [];
       this.total = 0;

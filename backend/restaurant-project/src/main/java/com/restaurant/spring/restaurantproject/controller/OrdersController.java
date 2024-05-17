@@ -72,7 +72,7 @@ public class OrdersController {
 //        parameters.put("total", "7000");
 
         JasperReport compileReport = JasperCompileManager
-                .compileReport(new FileInputStream("src/main/resources/orderBill.jrxml"));
+                .compileReport(new FileInputStream("src/main/resources/invoice.jrxml"));
 
         JasperPrint jasperPrint = JasperFillManager.fillReport(compileReport, parameters, beanCollectionDataSource);
 

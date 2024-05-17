@@ -51,7 +51,7 @@ const routes: Routes = [
     component: OrdersComponent,
   },
   {
-    path: 'myorders/checkout/:id',
+    path: 'myorders/checkout',
     component: CheckoutComponent,
   },
   {

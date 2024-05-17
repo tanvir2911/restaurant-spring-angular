@@ -54,36 +54,36 @@ ICwxNSwxNSw2ODg3ZGU0OC02NTM2LTQwN2QtYTU2ZS1kZTVjNDRlNDEyMWE7]]>
 <!--        <property name="com.jaspersoft.studio.field.label" value="email"/>-->
 <!--        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>-->
 <!--    </field>-->
-    <field name="firstName" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.name" value="first_name"/>
-        <property name="com.jaspersoft.studio.field.label" value="first_name"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>
-    </field>
-    <field name="lastName" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.name" value="last_name"/>
-        <property name="com.jaspersoft.studio.field.label" value="last_name"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>
-    </field>
-    <field name="password" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.name" value="password"/>
-        <property name="com.jaspersoft.studio.field.label" value="password"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>
-    </field>
-    <field name="phoneNumber" class="java.lang.Long">
-        <property name="com.jaspersoft.studio.field.name" value="phone_number"/>
-        <property name="com.jaspersoft.studio.field.label" value="phone_number"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>
-    </field>
-    <field name="termsOfService" class="java.lang.Boolean">
-        <property name="com.jaspersoft.studio.field.name" value="terms_of_service"/>
-        <property name="com.jaspersoft.studio.field.label" value="terms_of_service"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>
-    </field>
-    <field name="userName" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.name" value="user_name"/>
-        <property name="com.jaspersoft.studio.field.label" value="user_name"/>
-        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>
-    </field>
+<!--    <field name="firstName" class="java.lang.String">-->
+<!--        <property name="com.jaspersoft.studio.field.name" value="first_name"/>-->
+<!--        <property name="com.jaspersoft.studio.field.label" value="first_name"/>-->
+<!--        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>-->
+<!--    </field>-->
+<!--    <field name="lastName" class="java.lang.String">-->
+<!--        <property name="com.jaspersoft.studio.field.name" value="last_name"/>-->
+<!--        <property name="com.jaspersoft.studio.field.label" value="last_name"/>-->
+<!--        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>-->
+<!--    </field>-->
+<!--    <field name="password" class="java.lang.String">-->
+<!--        <property name="com.jaspersoft.studio.field.name" value="password"/>-->
+<!--        <property name="com.jaspersoft.studio.field.label" value="password"/>-->
+<!--        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>-->
+<!--    </field>-->
+<!--    <field name="phoneNumber" class="java.lang.Long">-->
+<!--        <property name="com.jaspersoft.studio.field.name" value="phone_number"/>-->
+<!--        <property name="com.jaspersoft.studio.field.label" value="phone_number"/>-->
+<!--        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>-->
+<!--    </field>-->
+<!--    <field name="termsOfService" class="java.lang.Boolean">-->
+<!--        <property name="com.jaspersoft.studio.field.name" value="terms_of_service"/>-->
+<!--        <property name="com.jaspersoft.studio.field.label" value="terms_of_service"/>-->
+<!--        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>-->
+<!--    </field>-->
+<!--    <field name="userName" class="java.lang.String">-->
+<!--        <property name="com.jaspersoft.studio.field.name" value="user_name"/>-->
+<!--        <property name="com.jaspersoft.studio.field.label" value="user_name"/>-->
+<!--        <property name="com.jaspersoft.studio.field.tree.path" value="users"/>-->
+<!--    </field>-->
     <background>
         <band splitType="Stretch"/>
     </background>
